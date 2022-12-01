@@ -10,32 +10,40 @@
 </head>
 <body>
     <div class="conteneur1">
-        <fieldset>
-            <legend>Calculatrice</legend>
             <div class="conteneur">
-                <form action="">
-                    <div class="input">
-                        <label for="nbr1">Nombre 1</label>
-                        <input id="nbr1">
-                    </div>
-                    <br>
-                    <br>
-                    <div class="input">
-                        <label for="nbr2">Nombre 2</label>
-                        <input id="nbr2">
-                    </div>
-                    <br>
-                    <br>
-                    <div class="conteneur">
-                        <button onclick="calcul()">calcul</button>
-                        <button onclick="ss">ss</button>
-                    </div>
-                    Addition : <input id="addi">
-                </form>
+                <fieldset>
+                    <legend>Calculatrice</legend>
+                    <form action="" onchange="ControleSaisie()">
+                        <div class="input">
+                                <label for="nbr1">Nombre 1</label>
+                                <input type="text" name="nombre" id="nbr1">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input">
+                                <label for="nbr2">Nombre 2</label>
+                                <input type="text" name="nobre2" id="nbr2">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="conteneur">
+                                <input type="button" onclick="Calcul()" name="Valide" value="enregistrer" id="valide">
+                            </div>
+                            <div class="contener error" id="erreur">
+
+                        </div>
+                        <br>
+                        <div class="resultat">
+                            Addition : <input id="addition"> <br><br>
+                            Multiplication : <input id="multiplication"> <br> <br>
+                            Division : <input id="division"> <br><br>
+                            Modulo : <input id="modulo">
+                        </div>
+                    </form>
+                </fieldset>
             </div>
-        </fieldset>
     </div>
-    bonjour arlytchi
+
 </body>
 </html>
 <script>

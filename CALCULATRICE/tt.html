@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="Calculatrice.css">
+    <script src="Calculatrice.js" ></script>
+</head>
+
+<body>
+    <div class="contener0">
+    <fieldset >
+        <legend>Calculatrice avec controle de saisie</legend>
+        <form action="" onchange="verif()" >
+            <div class="contener">
+                <div class="contener">
+                        <label for="lenombre">Nombre 1 :</label>
+                        <input type="text" name="nombre" id="lenombre">
+                            <br>
+                        <label for="lenombre2">Nombre 2 :</label>
+                        <input type="text" name="nombre2" id="lenombre2">
+                            <br>
+                            <input type="button" onclick="Calcul()" name="enregistrer"  value="Calculer" id="enregistrer">
+                </div>
+                <div class="contener error" id="erreur">
+                    
+                </div>
+            </div>
+            <script>
+                function Calcul() {
+                    var nbr1, nbr2, som;
+                    
+                    nbr1 = Number(document.getElementById("lenombre").value);
+                    nbr2 = Number(document.getElementById("lenombre2").value);
+                    som = nbr1 + nbr2;
+                    multi = nbr1 * nbr2;
+                    //Tester si le diviseur n'est pas égal à 0 avec if
+                    div = nbr1 / nbr2;
+                    mod = nbr1 % nbr2;
+    
+                    document.getElementById("som").value = som;
+                    document.getElementById("multi").value = multi;
+                    document.getElementById("div").value = div;
+                    document.getElementById("mod").value = mod ;
+    
+                }
+            </script>
+
+        </form>
+           
+    <form>
+      <div class="Affichage">
+        Addition : <input id="som"> <br> 
+        Multiplication : <input id="multi"> <br> 
+        Division : <input id="div"> <br> 
+        Modulo : <input id="mod">
+     </div>
+    </form>
+    </fieldset>
+</div>
+</body>
+
+</html>
